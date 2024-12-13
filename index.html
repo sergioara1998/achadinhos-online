@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achadinhos Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .category {
+            cursor: pointer;
+            color: #4caf50;
+            font-size: 20px;
+            margin: 10px 0;
+            text-decoration: underline;
+        }
+        .links {
+            display: none;
+            margin-top: 10px;
+        }
+        .links a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #333;
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+        .links a:hover {
+            background: #e0e0e0;
+        }
+        .links img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Achadinhos Online
+            Produtos em Promoção!
+        </div>
+
+        <!-- Categoria Segurança -->
+        <div class="category" onclick="toggleLinks('seguranca')">Segurança</div>
+        <div class="links" id="seguranca">
+            <a href="https://s.shopee.com.br/6AUXZYiBTt" target="_blank">
+                <img src="https://via.placeholder.com/50" alt="Segurança">
+                Kit Camera de Segurança
+            </a>
+        </div>
+
+        <!-- Categoria Eletroeletrônicos -->
+        <div class="category" onclick="toggleLinks('eletroeletronicos')">Eletroeletrônicos</div>
+        <div class="links" id="eletroeletronicos">
+            <a href="https://example.com/eletro1" target="_blank">
+                <img src="https://via.placeholder.com/50" alt="Eletro">
+                Produto Eletro 1
+            </a>
+            <a href="https://example.com/eletro2" target="_blank">
+                <img src="https://via.placeholder.com/50" alt="Eletro">
+                Produto Eletro 2
+            </a>
+        </div>
+
+        <!-- Categoria Lazer -->
+        <div class="category" onclick="toggleLinks('lazer')">Lazer</div>
+        <div class="links" id="lazer">
+            <a href="https://example.com/lazer1" target="_blank">
+                <img src="https://via.placeholder.com/50" alt="Lazer">
+                Produto Lazer 1
+            </a>
+            <a href="https://example.com/lazer2" target="_blank">
+                <img src="https://via.placeholder.com/50" alt="Lazer">
+                Produto Lazer 2
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function toggleLinks(id) {
+            const links = document.getElementById(id);
+            if (links.style.display === "block") {
+                links.style.display = "none";
+            } else {
+                links.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
